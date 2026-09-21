@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#14213d">
+  <title>Stream jobs — Search Me</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><span class="brand-mark">⌕</span><span>search<span>me</span></span></a>
+      <nav aria-label="Main navigation">
+        <p class="nav-label">Workspace</p>
+        <a class="nav-item" href="index.html"><span>▦</span>Dashboard</a>
+        <a class="nav-item active" href="jobs.html?stream=graduate"><span>✦</span>Stream jobs <b id="streamCount">50</b></a>
+        <a class="nav-item" href="saved-jobs.html"><span>♡</span>Saved jobs</a>
+        <a class="nav-item" href="applications.html"><span>↗</span>Applications</a>
+        <p class="nav-label">Build your profile</p>
+        <a class="nav-item" href="resume.html"><span>▤</span>Resume & skills</a>
+        <a class="nav-item" href="preferences.html"><span>⚙</span>Preferences</a>
+      </nav>
+      <div class="sidebar-bottom"><div class="sidebar-note">Made for India's freshers <em>♥</em></div></div>
+    </aside>
+    <main>
+      <header class="topbar"><div class="breadcrumb"><span>Workspace</span><b>/</b><strong>Stream jobs</strong></div><a class="primary-button" href="index.html">Back to dashboard <span>→</span></a></header>
+      <div class="page-layout">
+        <div class="page-heading-row"><div><p class="eyebrow">50 CURATED STARTER LISTINGS</p><h1 id="streamTitle">Jobs for your stream</h1><p class="intro">Explore relevant government and private opportunities in one place.</p><p class="source-note">IT listings link directly to the named company careers website. Check each company page for its current vacancies.</p></div><select class="page-stream-select" id="pageStream"><option value="nursing">B.Sc Nursing</option><option value="agriculture">B.Sc Agriculture</option><option value="bcom">B.Com</option><option value="btech">B.Tech</option><option value="graduate">Any Graduate</option></select></div>
+        <section class="panel stream-page-panel">
+          <div class="stream-toolbar"><label class="stream-search"><span>⌕</span><input id="streamSearch" type="search" placeholder="Search roles, organizations or skills"></label><div class="stream-filters"><label class="radio-filter active"><input type="radio" name="jobType" value="all" checked> All jobs</label><label class="radio-filter"><input type="radio" name="jobType" value="government"> Government</label><label class="radio-filter"><input type="radio" name="jobType" value="private"> Private</label></div></div>
+          <div id="streamJobs" class="stream-job-grid"></div>
+          <div class="empty-card" id="streamEmpty" hidden><strong>No jobs match your search</strong><span>Try another keyword or switch the category.</span></div>
+        </section>
+      </div>
+    </main>
+  </div>
+  <script src="jobs.js"></script>
+</body>
+</html>
